@@ -18,9 +18,7 @@ for cnt in contours:
         cv2.putText(img, "Rectangle", (x, y), font, 1, (0))
     elif len(approx) == 5:
         cv2.putText(img, "Star", (x, y), font, 1, (0))
-    elif 6 < len(approx) < 15:
-        cv2.putText(img, "Ellipse", (x, y), font, 1, (0))
-    else:
+    elif len(approx) == 15:
         cv2.putText(img, "Circle", (x, y), font, 1, (0))
 
 cv2.imshow('images/someshapes.jpg', img)
